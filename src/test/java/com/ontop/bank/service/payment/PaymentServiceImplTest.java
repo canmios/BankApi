@@ -86,7 +86,6 @@ public class PaymentServiceImplTest {
         when(recipientBankAccountRepository.findByUserId(userId)).thenReturn(Optional.of(recipientBankAccountEntity));
         when(paymentRepository.save(any())).thenReturn(payment);
 
-
     }
 
     @Test
