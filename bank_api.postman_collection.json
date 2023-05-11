@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2d0dd49d-3083-4041-81a0-7fa6f9d1ba2f",
+		"_postman_id": "2cae34e0-05f8-4a76-85ad-80fd974901ad",
 		"name": "bank_api",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27281214"
@@ -27,16 +27,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8082/user/12347/",
+							"raw": "http://localhost:8082/users/12347/recipient-bank-accounts",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8082",
 							"path": [
-								"user",
+								"users",
 								"12347",
-								""
+								"recipient-bank-accounts"
 							]
 						}
 					},
@@ -57,15 +57,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8082/user/12347/recipient-bank-accounts",
+							"raw": "http://localhost:8082/users/123484/recipient-bank-accounts",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8082",
 							"path": [
-								"user",
-								"12347",
+								"users",
+								"123484",
 								"recipient-bank-accounts"
 							]
 						}
@@ -767,7 +767,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n   \"amount\": 3000\r\n}",
+							"raw": "{\r\n   \"amount\": 2000\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -775,14 +775,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8082/user/12347/payments",
+							"raw": "http://localhost:8082/users/12347/payments",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8082",
 							"path": [
-								"user",
+								"users",
 								"12347",
 								"payments"
 							]
@@ -794,7 +794,34 @@
 					"name": "Get Payments Filtered",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/users/12347/payments?amount=1800&createdFrom=2023-05-05T13:56:13.099096&createdTo=2023-05-11T13:56:13.099096",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"users",
+								"12347",
+								"payments"
+							],
+							"query": [
+								{
+									"key": "amount",
+									"value": "1800"
+								},
+								{
+									"key": "createdFrom",
+									"value": "2023-05-05T13:56:13.099096"
+								},
+								{
+									"key": "createdTo",
+									"value": "2023-05-11T13:56:13.099096"
+								}
+							]
+						}
 					},
 					"response": []
 				}
