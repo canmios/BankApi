@@ -35,6 +35,9 @@ public interface PaymentRepositoryMapper {
     @Mapping(target = "paymentStates", source = "paymentStates")
     Payment toPayment(PaymentEntity paymentEntity);
 
+    @Mapping(target = "paymentId", source = "payment.id")
+    PaymentState toPaymentState(PaymentStateEntity paymentStateEntity);
+
     @Mapping(target = "payment.id", source = "paymentId")
     PaymentStateEntity toPaymentStateEntity(PaymentState paymentState);
 

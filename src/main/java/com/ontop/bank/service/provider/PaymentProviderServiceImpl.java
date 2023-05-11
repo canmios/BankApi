@@ -1,6 +1,6 @@
 package com.ontop.bank.service.provider;
 
-import com.ontop.bank.infrastructure.client.payment.PaymentProviderImpl;
+import com.ontop.bank.infrastructure.client.payment.PaymentProviderClientImpl;
 import com.ontop.bank.service.model.payment.PaymentProvider;
 import com.ontop.bank.service.model.payment.PaymentStatus;
 import com.ontop.bank.service.model.recipient.RecipientBankAccount;
@@ -15,7 +15,7 @@ import java.util.Random;
 public class PaymentProviderServiceImpl implements PaymentProviderService {
 
 
-    private final PaymentProviderImpl feignPaymentProviderClient;
+    private final PaymentProviderClientImpl feignPaymentProviderClient;
 
     @Override
     public PaymentProvider createPaymentProvider(WalletBankAccount originBank, RecipientBankAccount recipientBank,

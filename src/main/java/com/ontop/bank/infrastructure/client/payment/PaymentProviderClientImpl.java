@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @AllArgsConstructor
 @Component
-public class PaymentProviderImpl implements PaymentProviderClient{
+public class PaymentProviderClientImpl implements PaymentProviderClient{
 
     private final FeignPaymentProviderClient feignPaymentProviderClient;
 
